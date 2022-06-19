@@ -1,3 +1,11 @@
+# Running the project
+To run this project clone the repository 
+Then inside project use following command line to install node modules
+`npm install` or `yarn install`
+After this you should be after to run it using `npm run`
+See you, Adrien
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
