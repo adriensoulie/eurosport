@@ -13,7 +13,9 @@ export default function MatchesHistory() {
 
   return (
     <div className="flex flex-col items-center my-12">
-      <h1 className="mt-4 text-4xl font-bold">Head to Head</h1>
+      {playersInfos && (
+        <h1 className="mt-4 text-4xl font-bold">Head to Head</h1>
+      )}
       <div className="flex items-center justify-center w-2/3 p-6 m-2">
         {playersInfos?.players.map((player) => {
           return (
@@ -40,7 +42,12 @@ export default function MatchesHistory() {
           );
         })}
       </div>
-      <p className="py-4 text-3xl font-semibold">Match History</p>
+      {!matchesInfos && (
+        <p className="text-4xl font-medium">Loading match history...</p>
+      )}
+      {matchesInfos && (
+        <p className="py-4 text-3xl font-semibold">Match History</p>
+      )}
       {matchesInfos?.matches.map((match) => {
         return <MatchCard {...match} />;
       })}

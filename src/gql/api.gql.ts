@@ -3,7 +3,7 @@ import { MatchesData, PlayersData } from '../type/type';
 import { useQuery } from '@apollo/client';
 
 export const GetPlayersInfos = () => {
-    const { data } = useQuery<PlayersData>(GET_PLAYERS_INFOS);
+    const { data } =  useQuery<PlayersData>(GET_PLAYERS_INFOS)
     return data
 }
 

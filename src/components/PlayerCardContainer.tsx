@@ -1,7 +1,7 @@
 import PlayerCard from "./PlayerCard";
 import { GetPlayersInfos } from "../gql/api.gql";
 
-export default function PlayerCardContainer() {
+export default function PlayerCardContainer({ setLoading, isLoading }: any) {
   const playersInfos = GetPlayersInfos();
 
   return (
