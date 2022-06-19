@@ -1,7 +1,6 @@
 import { Match } from "../type/type";
 
 export default function MatchCard(match: Match) {
-  console.log(match);
   const winner = match.winner;
   return (
     <div className="flex items-center justify-center">
