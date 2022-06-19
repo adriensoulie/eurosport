@@ -12,7 +12,7 @@ export default function PlayerCard(player: Player) {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center w-[300px] p-6 mt-12 bg-white rounded-lg shadow-lg hover:bg-gray-100 hover:cursor-pointer">
+    <div className="flex flex-col items-center justify-center w-[300px] p-6 my-12 mx-4 bg-white rounded-lg shadow-lg hover:bg-gray-100 hover:cursor-pointer">
       <img className="object-contain w-[100px]" src={player.picture.url} />
       <div className="flex items-center justify-center">
         <div>
@@ -21,28 +21,32 @@ export default function PlayerCard(player: Player) {
             src={player.country.picture.url}
           />
         </div>
-        <p className="pr-2 text-3xl font-bold">{player.firstname}</p>
-        <p className="text-3xl font-bold">{player.lastname}</p>
+        <p className="my-3 text-3xl font-normal">
+          {player.firstname} <span className="pl-1"> {player.lastname}</span>
+        </p>
       </div>
-      <div className="flex flex-col text-left">
-        <p className="pr-2">
-          Points: <span className="font-semibold">{stats.points}</span>
+      <div className="flex flex-col mb-4 text-left">
+        <p className="pb-3 text-2xl font-semibold text-center border-b">
+          Rank <span className="font-bold ">{stats.rank}</span>
+        </p>
+        <p className="mt-3">
+          Points: <span className="pl-2 font-semibold"> {stats.points}</span>
         </p>
         <p>
-          Age: <span className="font-semibold">{stats.age}</span>
+          Age:{" "}
+          <span className="pl-2 text-base font-semibold"> {stats.age}</span>
         </p>
         <p>
-          Size:{" "}
-          <span className="font-semibold">
-            {heightConvert(stats.height)} M.
+          Size:
+          <span className="pl-2 font-semibold">
+            {heightConvert(stats.height)} m.
           </span>
         </p>
         <p>
-          Weight:{" "}
-          <span className="font-semibold">{weightLoss(stats.weight)} Kg.</span>
-        </p>
-        <p>
-          Current rank: <span className="font-semibold">{stats.rank}</span>
+          Weight:
+          <span className="pl-2 font-semibold">
+            {weightLoss(stats.weight)} kg.
+          </span>
         </p>
       </div>
     </div>
