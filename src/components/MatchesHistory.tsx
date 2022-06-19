@@ -3,7 +3,7 @@ import MatchCard from "./MatchCard";
 import { useState } from "react";
 
 export default function MatchesHistory() {
-  const [matchesLimit, setMatchesLimit] = useState(20);
+  const [matchesLimit, setMatchesLimit] = useState(10);
   const playersInfos = GetPlayersInfos();
   const matchesInfos = GetMatchesHistory();
   const showMoreMatches = () => {
