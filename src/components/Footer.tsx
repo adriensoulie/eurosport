@@ -1,6 +1,6 @@
 export default function BottomNav() {
   return (
-    <div className="flex items-center justify-between w-full py-1 bg-black shadow-md bot-0">
+    <div className="bottom-0 flex items-center justify-between w-full py-1 bg-black shadow-md">
       <p className="p-12 text-xl font-bold text-left text-white">
         Technical test for Eurosport
       </p>

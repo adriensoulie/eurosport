@@ -1,9 +1,14 @@
 import { GetMatchesHistory, GetPlayersInfos } from "../gql/api.gql";
 import MatchCard from "./MatchCard";
+import { useState } from "react";
 
 export default function MatchesHistory() {
+  const [matchesLimit, setMatchesLimit] = useState(20);
   const playersInfos = GetPlayersInfos();
   const matchesInfos = GetMatchesHistory();
+  const showMoreMatches = () => {
+    setMatchesLimit(matchesLimit + 10);
+  };
   let nadalWinCount = 0;
   let wawrinkaWinCount = 0;
 
@@ -43,14 +48,24 @@ export default function MatchesHistory() {
         })}
       </div>
       {!matchesInfos && (
-        <p className="text-4xl font-medium">Loading match history...</p>
+        <p className="h-screen text-4xl font-medium">
+          Loading match history...
+        </p>
       )}
       {matchesInfos && (
         <p className="py-4 text-3xl font-semibold">Match History</p>
       )}
-      {matchesInfos?.matches.map((match) => {
+      {matchesInfos?.matches.slice(0, matchesLimit).map((match) => {
         return <MatchCard {...match} />;
       })}
+      {matchesInfos && (
+        <button
+          className="px-4 py-2 my-6 font-bold text-white bg-black border border-black rounded hover:bg-white hover:text-black"
+          onClick={() => showMoreMatches()}
+        >
+          Load more
+        </button>
+      )}
     </div>
   );
 }

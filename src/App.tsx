@@ -1,7 +1,7 @@
 import PlayerCardContainer from "./components/PlayerCardContainer";
 import MatchesHistory from "./components/MatchesHistory";
 import Header from "./components/Header";
-import BottomNav from "./components/BottomNav";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Header />
         <PlayerCardContainer />
         <MatchesHistory />
-        <BottomNav />
+        <Footer />
       </div>
     </div>
   );
