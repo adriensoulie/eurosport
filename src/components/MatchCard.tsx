@@ -14,10 +14,10 @@ export default function MatchCard(match: Match) {
       <div className="flex flex-col w-[360px] items-center justify-center p-6 m-2 bg-white rounded-lg shadow-lg hover:bg-gray-100 hover:cursor-pointer">
         <div className="flex items-center">
           <p className="pr-2 italic">{getMatchDate(match.startTime)}</p>
+          <img className="h-5 mx-2 w-7" src={winner.country.picture.url} />
           <p className="pl-1 font-medium">
             {winner.firstname} {winner.lastname}
           </p>
-          <img className="h-5 ml-2 w-7" src={winner.country.picture.url} />
           <p className="pl-2 text-sm font-bold text-lime-500">WIN</p>
         </div>
       </div>
