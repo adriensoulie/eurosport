@@ -19,7 +19,7 @@ export default function MatchesHistory() {
       <div className="flex items-center justify-center w-2/3 p-6 m-2">
         {playersInfos?.players.map((player) => {
           return (
-            <div className="px-6 my-6 ">
+            <div className="px-6 my-6 text-center">
               <div className="flex items-center">
                 <img
                   className="object-contain h-5 mr-2 w-7"

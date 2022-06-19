@@ -1,4 +1,3 @@
-import "./App.css";
 import PlayerCardContainer from "./components/PlayerCardContainer";
 import MatchesHistory from "./components/MatchesHistory";
 import Header from "./components/Header";
