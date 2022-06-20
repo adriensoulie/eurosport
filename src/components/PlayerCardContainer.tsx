@@ -11,7 +11,7 @@ export default function PlayerCardContainer({ setLoading, isLoading }: any) {
       )}
       <div className="flex justify-center">
         {playersInfos?.players.map((player) => {
-          return <PlayerCard {...player} />;
+          return <PlayerCard key={player.id} {...player} />;
         })}
       </div>
     </div>

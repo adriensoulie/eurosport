@@ -56,7 +56,7 @@ export default function MatchesHistory() {
         <p className="py-4 text-3xl font-semibold">Match History</p>
       )}
       {matchesInfos?.matches.slice(0, matchesLimit).map((match) => {
-        return <MatchCard {...match} />;
+        return <MatchCard key={match.id} {...match} />;
       })}
       {matchesInfos && (
         <button
