@@ -1,7 +1,6 @@
 # Running the project
 
 To run this project clone the repository
-To run this project clone the repository
 Then inside project use following command line to install node modules
 `npm install` or `yarn install`
 After this you should be after to run it using `npm run`
