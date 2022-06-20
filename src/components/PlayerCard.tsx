@@ -30,21 +30,21 @@ export default function PlayerCard(player: Player) {
           Rank <span className="font-bold ">{stats.rank}</span>
         </p>
         <p className="mt-3">
-          Points: <span className="pl-2 font-semibold"> {stats.points}</span>
+          Points: <span className="pl-1 font-semibold"> {stats.points}</span>
         </p>
         <p>
           Age:{" "}
-          <span className="pl-2 text-base font-semibold"> {stats.age}</span>
+          <span className="pl-1 text-base font-semibold"> {stats.age}</span>
         </p>
         <p>
           Size:
-          <span className="pl-2 font-semibold">
+          <span className="pl-1 font-semibold">
             {heightConvert(stats.height)} m.
           </span>
         </p>
         <p>
           Weight:
-          <span className="pl-2 font-semibold">
+          <span className="pl-1 font-semibold">
             {weightLoss(stats.weight)} kg.
           </span>
         </p>
